@@ -9,13 +9,17 @@
 /* Begin PBXBuildFile section */
 		7BD1D37B287DE57500927E40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D37A287DE57500927E40 /* AppDelegate.swift */; };
 		7BD1D37D287DE57500927E40 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D37C287DE57500927E40 /* SceneDelegate.swift */; };
-		7BD1D37F287DE57500927E40 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D37E287DE57500927E40 /* ViewController.swift */; };
-		7BD1D382287DE57500927E40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BD1D380287DE57500927E40 /* Main.storyboard */; };
+		7BD1D37F287DE57500927E40 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D37E287DE57500927E40 /* DashboardViewController.swift */; };
 		7BD1D384287DE57700927E40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BD1D383287DE57700927E40 /* Assets.xcassets */; };
 		7BD1D387287DE57700927E40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BD1D385287DE57700927E40 /* LaunchScreen.storyboard */; };
 		7BD1D392287DE57700927E40 /* TenTwentyAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D391287DE57700927E40 /* TenTwentyAssignmentTests.swift */; };
 		7BD1D39C287DE57700927E40 /* TenTwentyAssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D39B287DE57700927E40 /* TenTwentyAssignmentUITests.swift */; };
 		7BD1D39E287DE57700927E40 /* TenTwentyAssignmentUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D39D287DE57700927E40 /* TenTwentyAssignmentUITestsLaunchTests.swift */; };
+		7BD1D3AE287E157D00927E40 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D3AD287E157D00927E40 /* TabBarViewController.swift */; };
+		7BD1D3B1287E15A200927E40 /* TabBarModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D3B0287E15A200927E40 /* TabBarModuleBuilder.swift */; };
+		7BD1D3B5287E1DB500927E40 /* DashboardModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D3B4287E1DB500927E40 /* DashboardModuleBuilder.swift */; };
+		7BD1D3B9287E1F1A00927E40 /* WatchTabModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D3B8287E1F1A00927E40 /* WatchTabModuleBuilder.swift */; };
+		7BD1D3BB287E1F6900927E40 /* WatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D3BA287E1F6900927E40 /* WatchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +43,7 @@
 		7BD1D377287DE57500927E40 /* TenTwentyAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TenTwentyAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BD1D37A287DE57500927E40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BD1D37C287DE57500927E40 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7BD1D37E287DE57500927E40 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7BD1D381287DE57500927E40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7BD1D37E287DE57500927E40 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		7BD1D383287DE57700927E40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7BD1D386287DE57700927E40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7BD1D388287DE57700927E40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +52,11 @@
 		7BD1D397287DE57700927E40 /* TenTwentyAssignmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TenTwentyAssignmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BD1D39B287DE57700927E40 /* TenTwentyAssignmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenTwentyAssignmentUITests.swift; sourceTree = "<group>"; };
 		7BD1D39D287DE57700927E40 /* TenTwentyAssignmentUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenTwentyAssignmentUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7BD1D3AD287E157D00927E40 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		7BD1D3B0287E15A200927E40 /* TabBarModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarModuleBuilder.swift; sourceTree = "<group>"; };
+		7BD1D3B4287E1DB500927E40 /* DashboardModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardModuleBuilder.swift; sourceTree = "<group>"; };
+		7BD1D3B8287E1F1A00927E40 /* WatchTabModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchTabModuleBuilder.swift; sourceTree = "<group>"; };
+		7BD1D3BA287E1F6900927E40 /* WatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +107,8 @@
 		7BD1D379287DE57500927E40 /* TenTwentyAssignment */ = {
 			isa = PBXGroup;
 			children = (
-				7BD1D37A287DE57500927E40 /* AppDelegate.swift */,
-				7BD1D37C287DE57500927E40 /* SceneDelegate.swift */,
-				7BD1D37E287DE57500927E40 /* ViewController.swift */,
-				7BD1D380287DE57500927E40 /* Main.storyboard */,
+				7BD1D3AA287DE5FA00927E40 /* AppLifeCycle */,
+				7BD1D3AB287DE72F00927E40 /* Scenes */,
 				7BD1D383287DE57700927E40 /* Assets.xcassets */,
 				7BD1D385287DE57700927E40 /* LaunchScreen.storyboard */,
 				7BD1D388287DE57700927E40 /* Info.plist */,
@@ -125,6 +131,76 @@
 				7BD1D39D287DE57700927E40 /* TenTwentyAssignmentUITestsLaunchTests.swift */,
 			);
 			path = TenTwentyAssignmentUITests;
+			sourceTree = "<group>";
+		};
+		7BD1D3AA287DE5FA00927E40 /* AppLifeCycle */ = {
+			isa = PBXGroup;
+			children = (
+				7BD1D37A287DE57500927E40 /* AppDelegate.swift */,
+				7BD1D37C287DE57500927E40 /* SceneDelegate.swift */,
+			);
+			path = AppLifeCycle;
+			sourceTree = "<group>";
+		};
+		7BD1D3AB287DE72F00927E40 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				7BD1D3AC287E155400927E40 /* Tabbar */,
+				7BD1D3B2287E1D8C00927E40 /* DashboardTab */,
+				7BD1D3B6287E1EF300927E40 /* WatchTab */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		7BD1D3AC287E155400927E40 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				7BD1D3AF287E158E00927E40 /* ModuleBuilder */,
+				7BD1D3AD287E157D00927E40 /* TabBarViewController.swift */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		7BD1D3AF287E158E00927E40 /* ModuleBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				7BD1D3B0287E15A200927E40 /* TabBarModuleBuilder.swift */,
+			);
+			path = ModuleBuilder;
+			sourceTree = "<group>";
+		};
+		7BD1D3B2287E1D8C00927E40 /* DashboardTab */ = {
+			isa = PBXGroup;
+			children = (
+				7BD1D3B3287E1D9F00927E40 /* ModuleBuilder */,
+				7BD1D37E287DE57500927E40 /* DashboardViewController.swift */,
+			);
+			path = DashboardTab;
+			sourceTree = "<group>";
+		};
+		7BD1D3B3287E1D9F00927E40 /* ModuleBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				7BD1D3B4287E1DB500927E40 /* DashboardModuleBuilder.swift */,
+			);
+			path = ModuleBuilder;
+			sourceTree = "<group>";
+		};
+		7BD1D3B6287E1EF300927E40 /* WatchTab */ = {
+			isa = PBXGroup;
+			children = (
+				7BD1D3B7287E1EFF00927E40 /* ModuleBuilder */,
+				7BD1D3BA287E1F6900927E40 /* WatchViewController.swift */,
+			);
+			path = WatchTab;
+			sourceTree = "<group>";
+		};
+		7BD1D3B7287E1EFF00927E40 /* ModuleBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				7BD1D3B8287E1F1A00927E40 /* WatchTabModuleBuilder.swift */,
+			);
+			path = ModuleBuilder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +309,6 @@
 			files = (
 				7BD1D387287DE57700927E40 /* LaunchScreen.storyboard in Resources */,
 				7BD1D384287DE57700927E40 /* Assets.xcassets in Resources */,
-				7BD1D382287DE57500927E40 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +333,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BD1D37F287DE57500927E40 /* ViewController.swift in Sources */,
+				7BD1D3B9287E1F1A00927E40 /* WatchTabModuleBuilder.swift in Sources */,
+				7BD1D3AE287E157D00927E40 /* TabBarViewController.swift in Sources */,
+				7BD1D3BB287E1F6900927E40 /* WatchViewController.swift in Sources */,
+				7BD1D3B1287E15A200927E40 /* TabBarModuleBuilder.swift in Sources */,
+				7BD1D3B5287E1DB500927E40 /* DashboardModuleBuilder.swift in Sources */,
+				7BD1D37F287DE57500927E40 /* DashboardViewController.swift in Sources */,
 				7BD1D37B287DE57500927E40 /* AppDelegate.swift in Sources */,
 				7BD1D37D287DE57500927E40 /* SceneDelegate.swift in Sources */,
 			);
@@ -297,14 +377,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		7BD1D380287DE57500927E40 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7BD1D381287DE57500927E40 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7BD1D385287DE57700927E40 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -442,7 +514,6 @@
 				INFOPLIST_FILE = TenTwentyAssignment/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -470,7 +541,6 @@
 				INFOPLIST_FILE = TenTwentyAssignment/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
