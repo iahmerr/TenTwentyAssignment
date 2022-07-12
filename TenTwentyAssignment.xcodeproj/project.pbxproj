@@ -31,6 +31,18 @@
 		7BD1D3E5287E223100927E40 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7BD1D3D3287E223100927E40 /* Poppins-Regular.ttf */; };
 		7BD1D3E8287E239C00927E40 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D3E7287E239C00927E40 /* Theme.swift */; };
 		7BD1D3EA287E25AE00927E40 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D3E9287E25AE00927E40 /* AppColor.swift */; };
+		7BD1D3F2287E26F200927E40 /* UIStackViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D3EB287E26F200927E40 /* UIStackViewFactory.swift */; };
+		7BD1D3F3287E26F200927E40 /* UILabelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D3EC287E26F200927E40 /* UILabelFactory.swift */; };
+		7BD1D3F4287E26F200927E40 /* UIButtonFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D3ED287E26F200927E40 /* UIButtonFactory.swift */; };
+		7BD1D3F5287E26F200927E40 /* UINavigationControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D3EE287E26F200927E40 /* UINavigationControllerFactory.swift */; };
+		7BD1D3F6287E26F200927E40 /* UITextFieldFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D3EF287E26F200927E40 /* UITextFieldFactory.swift */; };
+		7BD1D3F7287E26F200927E40 /* UIImageViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D3F0287E26F200927E40 /* UIImageViewFactory.swift */; };
+		7BD1D3F8287E26F200927E40 /* UITableViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D3F1287E26F200927E40 /* UITableViewFactory.swift */; };
+		7BD1D3FF287E274000927E40 /* ReuableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D3FA287E273F00927E40 /* ReuableTableViewCell.swift */; };
+		7BD1D400287E274000927E40 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D3FB287E274000927E40 /* AppError.swift */; };
+		7BD1D401287E274000927E40 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D3FC287E274000927E40 /* UIImageView+Extension.swift */; };
+		7BD1D402287E274000927E40 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D3FD287E274000927E40 /* UIView+Extension.swift */; };
+		7BD1D403287E274000927E40 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D3FE287E274000927E40 /* UIViewController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +91,18 @@
 		7BD1D3D3287E223100927E40 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		7BD1D3E7287E239C00927E40 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		7BD1D3E9287E25AE00927E40 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
+		7BD1D3EB287E26F200927E40 /* UIStackViewFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStackViewFactory.swift; sourceTree = "<group>"; };
+		7BD1D3EC287E26F200927E40 /* UILabelFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelFactory.swift; sourceTree = "<group>"; };
+		7BD1D3ED287E26F200927E40 /* UIButtonFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonFactory.swift; sourceTree = "<group>"; };
+		7BD1D3EE287E26F200927E40 /* UINavigationControllerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINavigationControllerFactory.swift; sourceTree = "<group>"; };
+		7BD1D3EF287E26F200927E40 /* UITextFieldFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldFactory.swift; sourceTree = "<group>"; };
+		7BD1D3F0287E26F200927E40 /* UIImageViewFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewFactory.swift; sourceTree = "<group>"; };
+		7BD1D3F1287E26F200927E40 /* UITableViewFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewFactory.swift; sourceTree = "<group>"; };
+		7BD1D3FA287E273F00927E40 /* ReuableTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReuableTableViewCell.swift; sourceTree = "<group>"; };
+		7BD1D3FB287E274000927E40 /* AppError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		7BD1D3FC287E274000927E40 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		7BD1D3FD287E274000927E40 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		7BD1D3FE287E274000927E40 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +253,13 @@
 		7BD1D3BC287E215F00927E40 /* AppFactories */ = {
 			isa = PBXGroup;
 			children = (
+				7BD1D3ED287E26F200927E40 /* UIButtonFactory.swift */,
+				7BD1D3F0287E26F200927E40 /* UIImageViewFactory.swift */,
+				7BD1D3EC287E26F200927E40 /* UILabelFactory.swift */,
+				7BD1D3EE287E26F200927E40 /* UINavigationControllerFactory.swift */,
+				7BD1D3EB287E26F200927E40 /* UIStackViewFactory.swift */,
+				7BD1D3F1287E26F200927E40 /* UITableViewFactory.swift */,
+				7BD1D3EF287E26F200927E40 /* UITextFieldFactory.swift */,
 			);
 			path = AppFactories;
 			sourceTree = "<group>";
@@ -236,6 +267,7 @@
 		7BD1D3BD287E21A500927E40 /* AppKit */ = {
 			isa = PBXGroup;
 			children = (
+				7BD1D3F9287E273000927E40 /* Extensions */,
 				7BD1D3E6287E238000927E40 /* AppTheme */,
 				7BD1D3BE287E21BE00927E40 /* AppFont */,
 				7BD1D3BC287E215F00927E40 /* AppFactories */,
@@ -274,6 +306,18 @@
 				7BD1D3E9287E25AE00927E40 /* AppColor.swift */,
 			);
 			path = AppTheme;
+			sourceTree = "<group>";
+		};
+		7BD1D3F9287E273000927E40 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7BD1D3FB287E274000927E40 /* AppError.swift */,
+				7BD1D3FA287E273F00927E40 /* ReuableTableViewCell.swift */,
+				7BD1D3FC287E274000927E40 /* UIImageView+Extension.swift */,
+				7BD1D3FD287E274000927E40 /* UIView+Extension.swift */,
+				7BD1D3FE287E274000927E40 /* UIViewController+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -414,16 +458,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BD1D402287E274000927E40 /* UIView+Extension.swift in Sources */,
 				7BD1D3B9287E1F1A00927E40 /* WatchTabModuleBuilder.swift in Sources */,
 				7BD1D3AE287E157D00927E40 /* TabBarViewController.swift in Sources */,
+				7BD1D3F6287E26F200927E40 /* UITextFieldFactory.swift in Sources */,
+				7BD1D3F2287E26F200927E40 /* UIStackViewFactory.swift in Sources */,
 				7BD1D3C0287E21E900927E40 /* AppFont.swift in Sources */,
+				7BD1D3F4287E26F200927E40 /* UIButtonFactory.swift in Sources */,
+				7BD1D403287E274000927E40 /* UIViewController+Extension.swift in Sources */,
+				7BD1D3FF287E274000927E40 /* ReuableTableViewCell.swift in Sources */,
+				7BD1D3F8287E26F200927E40 /* UITableViewFactory.swift in Sources */,
 				7BD1D3BB287E1F6900927E40 /* WatchViewController.swift in Sources */,
+				7BD1D401287E274000927E40 /* UIImageView+Extension.swift in Sources */,
 				7BD1D3B1287E15A200927E40 /* TabBarModuleBuilder.swift in Sources */,
 				7BD1D3B5287E1DB500927E40 /* DashboardModuleBuilder.swift in Sources */,
+				7BD1D3F7287E26F200927E40 /* UIImageViewFactory.swift in Sources */,
+				7BD1D400287E274000927E40 /* AppError.swift in Sources */,
 				7BD1D37F287DE57500927E40 /* DashboardViewController.swift in Sources */,
+				7BD1D3F3287E26F200927E40 /* UILabelFactory.swift in Sources */,
 				7BD1D3E8287E239C00927E40 /* Theme.swift in Sources */,
 				7BD1D37B287DE57500927E40 /* AppDelegate.swift in Sources */,
 				7BD1D3EA287E25AE00927E40 /* AppColor.swift in Sources */,
+				7BD1D3F5287E26F200927E40 /* UINavigationControllerFactory.swift in Sources */,
 				7BD1D37D287DE57500927E40 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
