@@ -13,6 +13,12 @@ final class TabBarViewController: UITabBarController {
         super.viewDidLoad()
         setupTabbar()
     }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        tabBar.frame.size.height = 95
+        tabBar.frame.origin.y = view.frame.height - 95
+    }
 }
 
 fileprivate extension TabBarViewController {

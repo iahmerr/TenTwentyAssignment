@@ -18,7 +18,7 @@ final class CreateTabbarModule: TabbarModuleBuilder {
         let vc1 = DashboardhModuleBuilder().createView()
         let vc2 = WatchTabModuleBuilder().createView()
         
-        tabbar.tabBar.backgroundColor = .black
+        tabbar.tabBar.backgroundColor = UIColor.appColor(ofType: .tabbarBackgroundColor)
         tabbar.tabBar.tintColor = .white
         tabbar.setViewControllers([vc1, vc2], animated: true)
         return tabbar

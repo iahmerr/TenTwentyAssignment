@@ -153,8 +153,8 @@
 		7BD1D379287DE57500927E40 /* TenTwentyAssignment */ = {
 			isa = PBXGroup;
 			children = (
-				7BD1D3BD287E21A500927E40 /* AppKit */,
 				7BD1D3AA287DE5FA00927E40 /* AppLifeCycle */,
+				7BD1D3BD287E21A500927E40 /* AppKit */,
 				7BD1D3AB287DE72F00927E40 /* Scenes */,
 				7BD1D383287DE57700927E40 /* Assets.xcassets */,
 				7BD1D385287DE57700927E40 /* LaunchScreen.storyboard */,

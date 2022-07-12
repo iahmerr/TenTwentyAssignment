@@ -18,6 +18,7 @@ public enum AppColorType {
     case vintage
     case cellLight
     case appBackgroundColor
+    case tabbarBackgroundColor
 }
 
 public extension UIColor {
@@ -33,6 +34,7 @@ public extension UIColor {
         case (.vintage):                  return #colorLiteral(red: 0.462745098, green: 0.3450980392, blue: 0.2352941176, alpha: 1)
         case (.cellLight):                return #colorLiteral(red: 0.9490196078, green: 0.9568627451, blue: 0.9764705882, alpha: 1)
         case (.appBackgroundColor):       return #colorLiteral(red: 0.9725490196, green: 0.9725490196, blue: 0.9725490196, alpha: 1)
+        case .tabbarBackgroundColor:      return #colorLiteral(red: 0.1803921569, green: 0.1529411765, blue: 0.2235294118, alpha: 1)
         }
     }
     
