@@ -20,6 +20,16 @@
 		7BD1D3B5287E1DB500927E40 /* DashboardModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D3B4287E1DB500927E40 /* DashboardModuleBuilder.swift */; };
 		7BD1D3B9287E1F1A00927E40 /* WatchTabModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D3B8287E1F1A00927E40 /* WatchTabModuleBuilder.swift */; };
 		7BD1D3BB287E1F6900927E40 /* WatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D3BA287E1F6900927E40 /* WatchViewController.swift */; };
+		7BD1D3C0287E21E900927E40 /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D3BF287E21E900927E40 /* AppFont.swift */; };
+		7BD1D3D4287E223100927E40 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7BD1D3C2287E223000927E40 /* Poppins-Medium.ttf */; };
+		7BD1D3D6287E223100927E40 /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7BD1D3C4287E223100927E40 /* Poppins-Thin.ttf */; };
+		7BD1D3D9287E223100927E40 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7BD1D3C7287E223100927E40 /* Poppins-Bold.ttf */; };
+		7BD1D3DC287E223100927E40 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7BD1D3CA287E223100927E40 /* Poppins-Light.ttf */; };
+		7BD1D3DD287E223100927E40 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7BD1D3CB287E223100927E40 /* Poppins-SemiBold.ttf */; };
+		7BD1D3DE287E223100927E40 /* Poppins-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7BD1D3CC287E223100927E40 /* Poppins-ExtraLight.ttf */; };
+		7BD1D3E3287E223100927E40 /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7BD1D3D1287E223100927E40 /* Poppins-Black.ttf */; };
+		7BD1D3E5287E223100927E40 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7BD1D3D3287E223100927E40 /* Poppins-Regular.ttf */; };
+		7BD1D3E8287E239C00927E40 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D3E7287E239C00927E40 /* Theme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +67,16 @@
 		7BD1D3B4287E1DB500927E40 /* DashboardModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardModuleBuilder.swift; sourceTree = "<group>"; };
 		7BD1D3B8287E1F1A00927E40 /* WatchTabModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchTabModuleBuilder.swift; sourceTree = "<group>"; };
 		7BD1D3BA287E1F6900927E40 /* WatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchViewController.swift; sourceTree = "<group>"; };
+		7BD1D3BF287E21E900927E40 /* AppFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
+		7BD1D3C2287E223000927E40 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		7BD1D3C4287E223100927E40 /* Poppins-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Thin.ttf"; sourceTree = "<group>"; };
+		7BD1D3C7287E223100927E40 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		7BD1D3CA287E223100927E40 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
+		7BD1D3CB287E223100927E40 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		7BD1D3CC287E223100927E40 /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLight.ttf"; sourceTree = "<group>"; };
+		7BD1D3D1287E223100927E40 /* Poppins-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Black.ttf"; sourceTree = "<group>"; };
+		7BD1D3D3287E223100927E40 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		7BD1D3E7287E239C00927E40 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +127,7 @@
 		7BD1D379287DE57500927E40 /* TenTwentyAssignment */ = {
 			isa = PBXGroup;
 			children = (
+				7BD1D3BD287E21A500927E40 /* AppKit */,
 				7BD1D3AA287DE5FA00927E40 /* AppLifeCycle */,
 				7BD1D3AB287DE72F00927E40 /* Scenes */,
 				7BD1D383287DE57700927E40 /* Assets.xcassets */,
@@ -201,6 +222,55 @@
 				7BD1D3B8287E1F1A00927E40 /* WatchTabModuleBuilder.swift */,
 			);
 			path = ModuleBuilder;
+			sourceTree = "<group>";
+		};
+		7BD1D3BC287E215F00927E40 /* AppFactories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AppFactories;
+			sourceTree = "<group>";
+		};
+		7BD1D3BD287E21A500927E40 /* AppKit */ = {
+			isa = PBXGroup;
+			children = (
+				7BD1D3E6287E238000927E40 /* AppTheme */,
+				7BD1D3BE287E21BE00927E40 /* AppFont */,
+				7BD1D3BC287E215F00927E40 /* AppFactories */,
+			);
+			path = AppKit;
+			sourceTree = "<group>";
+		};
+		7BD1D3BE287E21BE00927E40 /* AppFont */ = {
+			isa = PBXGroup;
+			children = (
+				7BD1D3C1287E221200927E40 /* FontFiles */,
+				7BD1D3BF287E21E900927E40 /* AppFont.swift */,
+			);
+			path = AppFont;
+			sourceTree = "<group>";
+		};
+		7BD1D3C1287E221200927E40 /* FontFiles */ = {
+			isa = PBXGroup;
+			children = (
+				7BD1D3D1287E223100927E40 /* Poppins-Black.ttf */,
+				7BD1D3C7287E223100927E40 /* Poppins-Bold.ttf */,
+				7BD1D3CC287E223100927E40 /* Poppins-ExtraLight.ttf */,
+				7BD1D3CA287E223100927E40 /* Poppins-Light.ttf */,
+				7BD1D3C2287E223000927E40 /* Poppins-Medium.ttf */,
+				7BD1D3D3287E223100927E40 /* Poppins-Regular.ttf */,
+				7BD1D3CB287E223100927E40 /* Poppins-SemiBold.ttf */,
+				7BD1D3C4287E223100927E40 /* Poppins-Thin.ttf */,
+			);
+			path = FontFiles;
+			sourceTree = "<group>";
+		};
+		7BD1D3E6287E238000927E40 /* AppTheme */ = {
+			isa = PBXGroup;
+			children = (
+				7BD1D3E7287E239C00927E40 /* Theme.swift */,
+			);
+			path = AppTheme;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,8 +377,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BD1D3D4287E223100927E40 /* Poppins-Medium.ttf in Resources */,
+				7BD1D3E3287E223100927E40 /* Poppins-Black.ttf in Resources */,
+				7BD1D3D9287E223100927E40 /* Poppins-Bold.ttf in Resources */,
 				7BD1D387287DE57700927E40 /* LaunchScreen.storyboard in Resources */,
 				7BD1D384287DE57700927E40 /* Assets.xcassets in Resources */,
+				7BD1D3DD287E223100927E40 /* Poppins-SemiBold.ttf in Resources */,
+				7BD1D3DC287E223100927E40 /* Poppins-Light.ttf in Resources */,
+				7BD1D3D6287E223100927E40 /* Poppins-Thin.ttf in Resources */,
+				7BD1D3DE287E223100927E40 /* Poppins-ExtraLight.ttf in Resources */,
+				7BD1D3E5287E223100927E40 /* Poppins-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,10 +413,12 @@
 			files = (
 				7BD1D3B9287E1F1A00927E40 /* WatchTabModuleBuilder.swift in Sources */,
 				7BD1D3AE287E157D00927E40 /* TabBarViewController.swift in Sources */,
+				7BD1D3C0287E21E900927E40 /* AppFont.swift in Sources */,
 				7BD1D3BB287E1F6900927E40 /* WatchViewController.swift in Sources */,
 				7BD1D3B1287E15A200927E40 /* TabBarModuleBuilder.swift in Sources */,
 				7BD1D3B5287E1DB500927E40 /* DashboardModuleBuilder.swift in Sources */,
 				7BD1D37F287DE57500927E40 /* DashboardViewController.swift in Sources */,
+				7BD1D3E8287E239C00927E40 /* Theme.swift in Sources */,
 				7BD1D37B287DE57500927E40 /* AppDelegate.swift in Sources */,
 				7BD1D37D287DE57500927E40 /* SceneDelegate.swift in Sources */,
 			);
