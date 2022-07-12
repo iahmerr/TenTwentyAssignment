@@ -30,6 +30,7 @@
 		7BD1D3E3287E223100927E40 /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7BD1D3D1287E223100927E40 /* Poppins-Black.ttf */; };
 		7BD1D3E5287E223100927E40 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7BD1D3D3287E223100927E40 /* Poppins-Regular.ttf */; };
 		7BD1D3E8287E239C00927E40 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D3E7287E239C00927E40 /* Theme.swift */; };
+		7BD1D3EA287E25AE00927E40 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D3E9287E25AE00927E40 /* AppColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		7BD1D3D1287E223100927E40 /* Poppins-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Black.ttf"; sourceTree = "<group>"; };
 		7BD1D3D3287E223100927E40 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		7BD1D3E7287E239C00927E40 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		7BD1D3E9287E25AE00927E40 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				7BD1D3E7287E239C00927E40 /* Theme.swift */,
+				7BD1D3E9287E25AE00927E40 /* AppColor.swift */,
 			);
 			path = AppTheme;
 			sourceTree = "<group>";
@@ -420,6 +423,7 @@
 				7BD1D37F287DE57500927E40 /* DashboardViewController.swift in Sources */,
 				7BD1D3E8287E239C00927E40 /* Theme.swift in Sources */,
 				7BD1D37B287DE57500927E40 /* AppDelegate.swift in Sources */,
+				7BD1D3EA287E25AE00927E40 /* AppColor.swift in Sources */,
 				7BD1D37D287DE57500927E40 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
