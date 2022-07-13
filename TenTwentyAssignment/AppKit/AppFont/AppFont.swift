@@ -19,7 +19,7 @@ public enum AppTextStyle {
     case nano
 }
 
-public enum AppFontWeight: String {
+public enum AppFontName: String {
     case extraLight = "Poppins-ExtraLight"
     case thin = "Poppins-Thin"
     case light = "Poppins-Light"
@@ -33,7 +33,7 @@ public enum AppFontWeight: String {
 
 public extension UIFont {
     
-    static func appFont(forTextStyle style: AppTextStyle, theme: AppFontTheme = AppTheme.shared.fontTheme, weight: AppFontWeight = .regular) -> UIFont {
+    static func appFont(forTextStyle style: AppTextStyle, theme: AppFontTheme = AppTheme.shared.fontTheme, weight: AppFontName = .regular) -> UIFont {
         switch style {
         case .title1:   return .appFont(ofSize: 28.0, theme: theme)
         case .title2:   return .appFont(ofSize: 24.0, theme: theme)
@@ -46,7 +46,7 @@ public extension UIFont {
         }
     }
     
-    static func appFont(ofSize size: CGFloat = 16, weigth: AppFontWeight = .regular, theme: AppFontTheme = AppTheme.shared.fontTheme) -> UIFont {
+    static func appFont(ofSize size: CGFloat = 16, weigth: AppFontName = .regular, theme: AppFontTheme = AppTheme.shared.fontTheme) -> UIFont {
         return UIFont(name: weigth.rawValue, size: size)!
     }
     

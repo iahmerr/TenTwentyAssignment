@@ -28,5 +28,7 @@ fileprivate extension TabBarViewController {
         self.tabBar.barStyle = .black
         self.tabBar.layer.cornerRadius = 20
         self.tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+         
+         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: AppFontName.light.rawValue, size: 13) as Any], for: .normal)
     }
 }

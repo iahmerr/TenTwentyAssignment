@@ -13,7 +13,7 @@ public final class UILabelFactory {
     public class func createUILabel<T: UILabel>
         (with colorType: AppColorType = .black,
          textStyle: AppTextStyle = .title1,
-         fontWeight: AppFontWeight = .regular,
+         fontWeight: AppFontName = .regular,
          alignment: NSTextAlignment = .left,
          numberOfLines: Int = 1,
          lineBreakMode: NSLineBreakMode = .byTruncatingTail,
