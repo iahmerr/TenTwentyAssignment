@@ -8,6 +8,10 @@
 import Foundation
 import UIKit
 
+public protocol ReusableTableViewCellViewModelType {
+    var reusableIdentifier: String { get }
+}
+
 public protocol ConfigurableView: AnyObject {
     func configure(with viewModel: Any)
 }
@@ -24,7 +28,7 @@ open class ReusableTableViewCell: UITableViewCell, ReusableView, ConfigurableTab
         super.prepareForReuse()
     }
     
-    open func configure(with manager: Any) {
+    open func configure(with viewModel: Any) {
         fatalError("Configure with viewModel must be implemented.")
     }
     

@@ -14,7 +14,7 @@ protocol URLRequestConvertible {
 enum URLRequestError: Error {
     case invalidURL
 }
-
+//private let imageBaseURL = URL(string: "https://image.tmdb.org/t/p/w500")!
 enum Route: String {
     case getMoviesList = "/3/movie/upcoming"
 }

@@ -6,26 +6,31 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
+import RxDataSources
 
 class DashboardViewController: UIViewController {
     
     private enum Constants {
-        static let headingLabelLeading: CGFloat = 20
-        static let headingLabelTop: CGFloat = 20
-        static let headingLabelHeight: CGFloat = 120
+        static let headingLabelLeading: CGFloat = 30
+        static let headingLabelTop: CGFloat = 30
+        static let headingLabelHeight: CGFloat = 80
     }
 
     private let headingLabel: UILabel = UILabelFactory.createUILabel(with: .black, textStyle: .regular, fontWeight: .medium, alignment: .left, text: "Watch")
     private let tableView = UITableViewFactory.createUITableView()
     
-    
+    private let disposeBag = DisposeBag()
     private let viewModel: DashboardViewModelType
+    private var dataSource: RxTableViewSectionedReloadDataSource<SectionModel<Int, ReusableTableViewCellViewModelType>>!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
         
         setupViews()
         setupConstraints()
+        bind()
     }
     
     init(viewModel: DashboardViewModelType) {
@@ -42,6 +47,7 @@ fileprivate extension DashboardViewController {
     
     func setupViews() {
         [headingLabel, tableView].forEach(view.addSubview)
+        tableView.backgroundColor = .appBackgroundColor
     }
     
     func setupConstraints(){
@@ -55,6 +61,20 @@ fileprivate extension DashboardViewController {
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
+    }
+}
+
+fileprivate extension DashboardViewController {
+    
+    func bind(){
+        
+        dataSource = RxTableViewSectionedReloadDataSource(configureCell: { (_, tableView, _, viewModel) in
+            let cell = tableView.dequeueReusableCell(withIdentifier: viewModel.reusableIdentifier) as! ReusableTableViewCell
+            cell.configure(with: viewModel)
+            return cell
+        })
+        
+//        viewModel.outputs.dataSource.bind(to: tableView.rx.items(dataSource: dataSource)).disposed(by: disposeBag)
     }
 }
 

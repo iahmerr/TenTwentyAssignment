@@ -50,6 +50,9 @@
 		7BD1D40F287F672A00927E40 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D40E287F672A00927E40 /* ApiClient.swift */; };
 		7BD1D411287F674C00927E40 /* UrlRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D410287F674C00927E40 /* UrlRequest.swift */; };
 		7BD1D414287F68FE00927E40 /* MoviesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D413287F68FE00927E40 /* MoviesResponse.swift */; };
+		7BD1D427287F731700927E40 /* RxDataSources in Frameworks */ = {isa = PBXBuildFile; productRef = 7BD1D426287F731700927E40 /* RxDataSources */; };
+		7BD1D429287F752500927E40 /* DashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D428287F752500927E40 /* DashboardTableViewCell.swift */; };
+		7BD1D42B287F753A00927E40 /* DashboardTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D42A287F753A00927E40 /* DashboardTableViewCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +118,8 @@
 		7BD1D40E287F672A00927E40 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		7BD1D410287F674C00927E40 /* UrlRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlRequest.swift; sourceTree = "<group>"; };
 		7BD1D413287F68FE00927E40 /* MoviesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesResponse.swift; sourceTree = "<group>"; };
+		7BD1D428287F752500927E40 /* DashboardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTableViewCell.swift; sourceTree = "<group>"; };
+		7BD1D42A287F753A00927E40 /* DashboardTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTableViewCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BD1D427287F731700927E40 /* RxDataSources in Frameworks */,
 				7BD1D40A287ED7B100927E40 /* RxSwift in Frameworks */,
 				7BD1D408287ED7B100927E40 /* RxCocoa in Frameworks */,
 			);
@@ -236,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				7BD1D3B3287E1D9F00927E40 /* ModuleBuilder */,
+				7BD1D415287F6D4700927E40 /* TableViewCell */,
 				7BD1D37E287DE57500927E40 /* DashboardViewController.swift */,
 				7BD1D404287EC06800927E40 /* DashboardViewModel.swift */,
 			);
@@ -355,6 +362,15 @@
 			path = ResponseModels;
 			sourceTree = "<group>";
 		};
+		7BD1D415287F6D4700927E40 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				7BD1D428287F752500927E40 /* DashboardTableViewCell.swift */,
+				7BD1D42A287F753A00927E40 /* DashboardTableViewCellViewModel.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -374,6 +390,7 @@
 			packageProductDependencies = (
 				7BD1D407287ED7B100927E40 /* RxCocoa */,
 				7BD1D409287ED7B100927E40 /* RxSwift */,
+				7BD1D426287F731700927E40 /* RxDataSources */,
 			);
 			productName = TenTwentyAssignment;
 			productReference = 7BD1D377287DE57500927E40 /* TenTwentyAssignment.app */;
@@ -449,6 +466,7 @@
 			mainGroup = 7BD1D36E287DE57500927E40;
 			packageReferences = (
 				7BD1D406287ED7B100927E40 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				7BD1D425287F731700927E40 /* XCRemoteSwiftPackageReference "RxDataSources" */,
 			);
 			productRefGroup = 7BD1D378287DE57500927E40 /* Products */;
 			projectDirPath = "";
@@ -511,8 +529,10 @@
 				7BD1D3FF287E274000927E40 /* ReuableTableViewCell.swift in Sources */,
 				7BD1D3F8287E26F200927E40 /* UITableViewFactory.swift in Sources */,
 				7BD1D3BB287E1F6900927E40 /* WatchViewController.swift in Sources */,
+				7BD1D42B287F753A00927E40 /* DashboardTableViewCellViewModel.swift in Sources */,
 				7BD1D401287E274000927E40 /* UIImageView+Extension.swift in Sources */,
 				7BD1D3B1287E15A200927E40 /* TabBarModuleBuilder.swift in Sources */,
+				7BD1D429287F752500927E40 /* DashboardTableViewCell.swift in Sources */,
 				7BD1D411287F674C00927E40 /* UrlRequest.swift in Sources */,
 				7BD1D3B5287E1DB500927E40 /* DashboardModuleBuilder.swift in Sources */,
 				7BD1D3F7287E26F200927E40 /* UIImageViewFactory.swift in Sources */,
@@ -869,6 +889,14 @@
 				kind = branch;
 			};
 		};
+		7BD1D425287F731700927E40 /* XCRemoteSwiftPackageReference "RxDataSources" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxDataSources.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -881,6 +909,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7BD1D406287ED7B100927E40 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
+		};
+		7BD1D426287F731700927E40 /* RxDataSources */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7BD1D425287F731700927E40 /* XCRemoteSwiftPackageReference "RxDataSources" */;
+			productName = RxDataSources;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
