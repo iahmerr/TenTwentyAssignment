@@ -8,7 +8,14 @@
 import UIKit
 
 class DashboardViewController: UIViewController {
+    
+    private enum Constants {
+        static let headingLabelLeading: CGFloat = 20
+        static let headingLabelTop: CGFloat = 20
+        static let headingLabelHeight: CGFloat = 120
+    }
 
+    private let headingLabel: UILabel = UILabelFactory.createUILabel(with: .black, textStyle: .regular, fontWeight: .medium, alignment: .left, text: "Watch")
     private let tableView = UITableViewFactory.createUITableView()
     
     
@@ -17,11 +24,13 @@ class DashboardViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = .white
         
+        setupViews()
+        setupConstraints()
     }
     
     init(viewModel: DashboardViewModelType) {
         self.viewModel = viewModel
-        super.init()
+        super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder: NSCoder) {
@@ -32,7 +41,20 @@ class DashboardViewController: UIViewController {
 fileprivate extension DashboardViewController {
     
     func setupViews() {
-        
+        [headingLabel, tableView].forEach(view.addSubview)
+    }
+    
+    func setupConstraints(){
+        NSLayoutConstraint.activate([
+            headingLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: Constants.headingLabelLeading),
+            headingLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: Constants.headingLabelTop),
+            headingLabel.heightAnchor.constraint(equalToConstant: Constants.headingLabelHeight),
+            
+            tableView.topAnchor.constraint(equalTo: headingLabel.bottomAnchor),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+        ])
     }
 }
 

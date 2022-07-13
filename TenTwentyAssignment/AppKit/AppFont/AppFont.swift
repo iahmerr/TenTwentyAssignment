@@ -46,8 +46,8 @@ public extension UIFont {
         }
     }
     
-    static func appFont(ofSize size: CGFloat, weigth: AppFontWeight = .regular, theme: AppFontTheme = AppTheme.shared.fontTheme) -> UIFont {
-        return UIFont(name: weigth.rawValue, size: size)!
+    static func appFont(ofSize size: CGFloat = 16, weigth: AppFontWeight = .regular, theme: AppFontTheme = AppTheme.shared.fontTheme) -> UIFont {
+        return UIFont(name: "Futura", size: size)!
     }
     
     static var title1: UIFont {
