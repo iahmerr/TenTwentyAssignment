@@ -16,7 +16,7 @@ final class WatchTabModuleBuilder: WatchTabModuleBuilding {
     
     func createView() -> UIViewController {
         let viewController = WatchViewController()
-        viewController.title = "Watch"
+        viewController.tabBarItem = UITabBarItem(title: "Watch", image: UIImage(named: "icon-watch"), tag: 1)
         return viewController
     }
 }

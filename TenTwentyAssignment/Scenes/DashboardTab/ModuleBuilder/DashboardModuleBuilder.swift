@@ -15,9 +15,10 @@ protocol DashboardModuleBuilding: AnyObject {
 final class DashboardhModuleBuilder: DashboardModuleBuilding {
     
     func createView() -> UIViewController {
-        let viewModel: DashboardViewModelType = DashboardViewModel()
+        let viewModel: DashboardViewModelType = DashboardViewModel(networkService: ApiService())
         let viewController = DashboardViewController(viewModel: viewModel)
         viewController.title = "Dashboard"
+        viewController.tabBarItem = UITabBarItem(title: "Dashboard", image: UIImage(named: "icon-dashboard"), tag: 0)
         return viewController
     }
 }

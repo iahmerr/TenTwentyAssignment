@@ -25,8 +25,8 @@ class DashboardViewModel: DashboardViewModelInput, DashboardViewModelOutput, Das
     var inputs: DashboardViewModelInput { return self }
     var outputs: DashboardViewModelOutput { return self }
     
-    init() {
-        
+    private let networkService: MoviesService
+    init(networkService: MoviesService) {
+        self.networkService = networkService
     }
-    
 }

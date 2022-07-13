@@ -46,6 +46,10 @@
 		7BD1D405287EC06800927E40 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D404287EC06800927E40 /* DashboardViewModel.swift */; };
 		7BD1D408287ED7B100927E40 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 7BD1D407287ED7B100927E40 /* RxCocoa */; };
 		7BD1D40A287ED7B100927E40 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7BD1D409287ED7B100927E40 /* RxSwift */; };
+		7BD1D40D287F670400927E40 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D40C287F670400927E40 /* ApiService.swift */; };
+		7BD1D40F287F672A00927E40 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D40E287F672A00927E40 /* ApiClient.swift */; };
+		7BD1D411287F674C00927E40 /* UrlRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D410287F674C00927E40 /* UrlRequest.swift */; };
+		7BD1D414287F68FE00927E40 /* MoviesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D413287F68FE00927E40 /* MoviesResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +111,10 @@
 		7BD1D3FD287E274000927E40 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		7BD1D3FE287E274000927E40 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		7BD1D404287EC06800927E40 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		7BD1D40C287F670400927E40 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		7BD1D40E287F672A00927E40 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		7BD1D410287F674C00927E40 /* UrlRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlRequest.swift; sourceTree = "<group>"; };
+		7BD1D413287F68FE00927E40 /* MoviesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +167,8 @@
 		7BD1D379287DE57500927E40 /* TenTwentyAssignment */ = {
 			isa = PBXGroup;
 			children = (
+				7BD1D412287F68EA00927E40 /* ResponseModels */,
+				7BD1D40B287F657600927E40 /* Network */,
 				7BD1D3AA287DE5FA00927E40 /* AppLifeCycle */,
 				7BD1D3BD287E21A500927E40 /* AppKit */,
 				7BD1D3AB287DE72F00927E40 /* Scenes */,
@@ -327,6 +337,24 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		7BD1D40B287F657600927E40 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				7BD1D40C287F670400927E40 /* ApiService.swift */,
+				7BD1D40E287F672A00927E40 /* ApiClient.swift */,
+				7BD1D410287F674C00927E40 /* UrlRequest.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		7BD1D412287F68EA00927E40 /* ResponseModels */ = {
+			isa = PBXGroup;
+			children = (
+				7BD1D413287F68FE00927E40 /* MoviesResponse.swift */,
+			);
+			path = ResponseModels;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -485,13 +513,17 @@
 				7BD1D3BB287E1F6900927E40 /* WatchViewController.swift in Sources */,
 				7BD1D401287E274000927E40 /* UIImageView+Extension.swift in Sources */,
 				7BD1D3B1287E15A200927E40 /* TabBarModuleBuilder.swift in Sources */,
+				7BD1D411287F674C00927E40 /* UrlRequest.swift in Sources */,
 				7BD1D3B5287E1DB500927E40 /* DashboardModuleBuilder.swift in Sources */,
 				7BD1D3F7287E26F200927E40 /* UIImageViewFactory.swift in Sources */,
 				7BD1D405287EC06800927E40 /* DashboardViewModel.swift in Sources */,
+				7BD1D414287F68FE00927E40 /* MoviesResponse.swift in Sources */,
+				7BD1D40D287F670400927E40 /* ApiService.swift in Sources */,
 				7BD1D400287E274000927E40 /* AppError.swift in Sources */,
 				7BD1D37F287DE57500927E40 /* DashboardViewController.swift in Sources */,
 				7BD1D3F3287E26F200927E40 /* UILabelFactory.swift in Sources */,
 				7BD1D3E8287E239C00927E40 /* Theme.swift in Sources */,
+				7BD1D40F287F672A00927E40 /* ApiClient.swift in Sources */,
 				7BD1D37B287DE57500927E40 /* AppDelegate.swift in Sources */,
 				7BD1D3EA287E25AE00927E40 /* AppColor.swift in Sources */,
 				7BD1D3F5287E26F200927E40 /* UINavigationControllerFactory.swift in Sources */,
@@ -593,7 +625,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -647,7 +679,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
