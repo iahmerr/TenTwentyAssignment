@@ -15,7 +15,8 @@ protocol DashboardModuleBuilding: AnyObject {
 final class DashboardhModuleBuilder: DashboardModuleBuilding {
     
     func createView() -> UIViewController {
-        let viewController = DashboardViewController()
+        let viewModel: DashboardViewModelType = DashboardViewModel()
+        let viewController = DashboardViewController(viewModel: viewModel)
         viewController.title = "Dashboard"
         return viewController
     }

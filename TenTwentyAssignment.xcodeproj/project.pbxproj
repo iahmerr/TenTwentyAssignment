@@ -43,6 +43,7 @@
 		7BD1D401287E274000927E40 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D3FC287E274000927E40 /* UIImageView+Extension.swift */; };
 		7BD1D402287E274000927E40 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D3FD287E274000927E40 /* UIView+Extension.swift */; };
 		7BD1D403287E274000927E40 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D3FE287E274000927E40 /* UIViewController+Extension.swift */; };
+		7BD1D405287EC06800927E40 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D404287EC06800927E40 /* DashboardViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,7 @@
 		7BD1D3FC287E274000927E40 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		7BD1D3FD287E274000927E40 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		7BD1D3FE287E274000927E40 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		7BD1D404287EC06800927E40 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,6 +223,7 @@
 			children = (
 				7BD1D3B3287E1D9F00927E40 /* ModuleBuilder */,
 				7BD1D37E287DE57500927E40 /* DashboardViewController.swift */,
+				7BD1D404287EC06800927E40 /* DashboardViewModel.swift */,
 			);
 			path = DashboardTab;
 			sourceTree = "<group>";
@@ -473,6 +476,7 @@
 				7BD1D3B1287E15A200927E40 /* TabBarModuleBuilder.swift in Sources */,
 				7BD1D3B5287E1DB500927E40 /* DashboardModuleBuilder.swift in Sources */,
 				7BD1D3F7287E26F200927E40 /* UIImageViewFactory.swift in Sources */,
+				7BD1D405287EC06800927E40 /* DashboardViewModel.swift in Sources */,
 				7BD1D400287E274000927E40 /* AppError.swift in Sources */,
 				7BD1D37F287DE57500927E40 /* DashboardViewController.swift in Sources */,
 				7BD1D3F3287E26F200927E40 /* UILabelFactory.swift in Sources */,
@@ -578,7 +582,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -632,7 +636,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

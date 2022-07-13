@@ -8,11 +8,11 @@
 import Foundation
 import UIKit
 
-protocol TabbarModuleBuilder {
+protocol TabbarModuleBuilding {
     func createView()-> UITabBarController
 }
 
-final class CreateTabbarModule: TabbarModuleBuilder {
+final class TabbarModuleBuilder: TabbarModuleBuilding {
     func createView() -> UITabBarController {
         let tabbar = TabBarViewController()
         let vc1 = DashboardhModuleBuilder().createView()
