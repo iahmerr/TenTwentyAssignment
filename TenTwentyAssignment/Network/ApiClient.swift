@@ -45,7 +45,7 @@ extension APIClient: ApiRequest {
                     completionHandler(.failure(AppError(error:error.localizedDescription)))
                 }
             case .failure(let error):
-                completionHandler(.failure(error))
+                completionHandler(.failure(AppError(error:error.localizedDescription)))
             }
         }
     }
