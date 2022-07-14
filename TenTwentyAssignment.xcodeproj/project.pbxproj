@@ -54,6 +54,11 @@
 		7BD1D42B287F753A00927E40 /* DashboardTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D42A287F753A00927E40 /* DashboardTableViewCellViewModel.swift */; };
 		7BD1D42E2880203400927E40 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 7BD1D42D2880203400927E40 /* SDWebImage */; };
 		7BD1D4302880598300927E40 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D42F2880598300927E40 /* UITableView+Extension.swift */; };
+		7BD1D4332880C72200927E40 /* DashboardSceneRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D4322880C72200927E40 /* DashboardSceneRouter.swift */; };
+		7BD1D4362880C7D200927E40 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D4352880C7D200927E40 /* MovieDetailViewController.swift */; };
+		7BD1D4382880C8DF00927E40 /* MovieDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D4372880C8DF00927E40 /* MovieDetailViewModel.swift */; };
+		7BD1D43B2880D0D900927E40 /* HeaderImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D43A2880D0D900927E40 /* HeaderImageTableViewCell.swift */; };
+		7BD1D43D2880D14400927E40 /* HeaderImageTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D43C2880D14400927E40 /* HeaderImageTableViewCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +127,11 @@
 		7BD1D428287F752500927E40 /* DashboardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTableViewCell.swift; sourceTree = "<group>"; };
 		7BD1D42A287F753A00927E40 /* DashboardTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		7BD1D42F2880598300927E40 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		7BD1D4322880C72200927E40 /* DashboardSceneRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardSceneRouter.swift; sourceTree = "<group>"; };
+		7BD1D4352880C7D200927E40 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
+		7BD1D4372880C8DF00927E40 /* MovieDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewModel.swift; sourceTree = "<group>"; };
+		7BD1D43A2880D0D900927E40 /* HeaderImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderImageTableViewCell.swift; sourceTree = "<group>"; };
+		7BD1D43C2880D14400927E40 /* HeaderImageTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderImageTableViewCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +226,7 @@
 		7BD1D3AB287DE72F00927E40 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				7BD1D4342880C7B300927E40 /* MovieDetail */,
 				7BD1D3AC287E155400927E40 /* Tabbar */,
 				7BD1D3B2287E1D8C00927E40 /* DashboardTab */,
 				7BD1D3B6287E1EF300927E40 /* WatchTab */,
@@ -243,6 +254,7 @@
 		7BD1D3B2287E1D8C00927E40 /* DashboardTab */ = {
 			isa = PBXGroup;
 			children = (
+				7BD1D4312880C70C00927E40 /* Router */,
 				7BD1D3B3287E1D9F00927E40 /* ModuleBuilder */,
 				7BD1D415287F6D4700927E40 /* TableViewCell */,
 				7BD1D37E287DE57500927E40 /* DashboardViewController.swift */,
@@ -372,6 +384,41 @@
 				7BD1D42A287F753A00927E40 /* DashboardTableViewCellViewModel.swift */,
 			);
 			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		7BD1D4312880C70C00927E40 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				7BD1D4322880C72200927E40 /* DashboardSceneRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		7BD1D4342880C7B300927E40 /* MovieDetail */ = {
+			isa = PBXGroup;
+			children = (
+				7BD1D4392880D0AA00927E40 /* TableViewCells */,
+				7BD1D4352880C7D200927E40 /* MovieDetailViewController.swift */,
+				7BD1D4372880C8DF00927E40 /* MovieDetailViewModel.swift */,
+			);
+			path = MovieDetail;
+			sourceTree = "<group>";
+		};
+		7BD1D4392880D0AA00927E40 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				7BD1D43E2880DA3100927E40 /* HeaderImage */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		7BD1D43E2880DA3100927E40 /* HeaderImage */ = {
+			isa = PBXGroup;
+			children = (
+				7BD1D43A2880D0D900927E40 /* HeaderImageTableViewCell.swift */,
+				7BD1D43C2880D14400927E40 /* HeaderImageTableViewCellViewModel.swift */,
+			);
+			path = HeaderImage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -532,9 +579,12 @@
 				7BD1D3FF287E274000927E40 /* ReuableTableViewCell.swift in Sources */,
 				7BD1D3F8287E26F200927E40 /* UITableViewFactory.swift in Sources */,
 				7BD1D3BB287E1F6900927E40 /* WatchViewController.swift in Sources */,
+				7BD1D43B2880D0D900927E40 /* HeaderImageTableViewCell.swift in Sources */,
 				7BD1D42B287F753A00927E40 /* DashboardTableViewCellViewModel.swift in Sources */,
+				7BD1D43D2880D14400927E40 /* HeaderImageTableViewCellViewModel.swift in Sources */,
 				7BD1D401287E274000927E40 /* UIImageView+Extension.swift in Sources */,
 				7BD1D3B1287E15A200927E40 /* TabBarModuleBuilder.swift in Sources */,
+				7BD1D4382880C8DF00927E40 /* MovieDetailViewModel.swift in Sources */,
 				7BD1D429287F752500927E40 /* DashboardTableViewCell.swift in Sources */,
 				7BD1D411287F674C00927E40 /* UrlRequest.swift in Sources */,
 				7BD1D3B5287E1DB500927E40 /* DashboardModuleBuilder.swift in Sources */,
@@ -547,10 +597,12 @@
 				7BD1D3F3287E26F200927E40 /* UILabelFactory.swift in Sources */,
 				7BD1D4302880598300927E40 /* UITableView+Extension.swift in Sources */,
 				7BD1D3E8287E239C00927E40 /* Theme.swift in Sources */,
+				7BD1D4332880C72200927E40 /* DashboardSceneRouter.swift in Sources */,
 				7BD1D40F287F672A00927E40 /* ApiClient.swift in Sources */,
 				7BD1D37B287DE57500927E40 /* AppDelegate.swift in Sources */,
 				7BD1D3EA287E25AE00927E40 /* AppColor.swift in Sources */,
 				7BD1D3F5287E26F200927E40 /* UINavigationControllerFactory.swift in Sources */,
+				7BD1D4362880C7D200927E40 /* MovieDetailViewController.swift in Sources */,
 				7BD1D37D287DE57500927E40 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

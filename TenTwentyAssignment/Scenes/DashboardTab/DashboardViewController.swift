@@ -22,6 +22,7 @@ final class DashboardViewController: UIViewController {
     
     private let disposeBag = DisposeBag()
     private let viewModel: DashboardViewModelType
+    private let router: DashboardRouting
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,8 +36,9 @@ final class DashboardViewController: UIViewController {
         bind()
     }
     
-    init(viewModel: DashboardViewModelType) {
+    init(viewModel: DashboardViewModelType, router: DashboardRouting) {
         self.viewModel = viewModel
+        self.router = router
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -107,6 +109,10 @@ extension DashboardViewController: UITableViewDelegate, UITableViewDataSource{
         cell.configure(with: viewModel.outputs.getCellViewModel(for: indexPath.row))
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.router.navigateToDetails(data: viewModel.outputs.getDetails(for: indexPath.row), navigationController: self.navigationController!)
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

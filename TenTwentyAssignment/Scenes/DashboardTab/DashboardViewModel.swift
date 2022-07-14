@@ -17,6 +17,7 @@ protocol DashboardViewModelOutput {
     func getCellViewModel(for indexPath: Int)->DashboardTableViewCellViewModel
     func numberOfCells(for section: Int)-> Int
     var reloadTableView: Observable<Void> { get }
+    func getDetails(for index: Int)-> MovieList
 }
 
 protocol DashboardViewModelType {
@@ -96,5 +97,9 @@ extension DashboardViewModel {
     
     func numberOfCells(for section: Int) -> Int {
        return cellViewModels.count
+    }
+    
+    func getDetails(for index: Int) -> MovieList {
+        return moviesResponse[index]
     }
 }

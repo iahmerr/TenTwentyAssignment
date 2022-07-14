@@ -16,9 +16,10 @@ final class DashboardhModuleBuilder: DashboardModuleBuilding {
     
     func createView() -> UIViewController {
         let viewModel: DashboardViewModelType = DashboardViewModel(networkService: ApiService())
-        let viewController = DashboardViewController(viewModel: viewModel)
+        let viewController = DashboardViewController(viewModel: viewModel, router: DashboardRouter())
         viewController.title = "Dashboard"
         viewController.tabBarItem = UITabBarItem(title: "Dashboard", image: UIImage(named: "icon-dashboard"), tag: 0)
-        return viewController
+        let nav = UINavigationControllerFactory.createTransparentNavigationController(rootViewController: viewController)
+        return nav
     }
 }
