@@ -30,6 +30,7 @@ class DashboardViewController: UIViewController {
         
         setupViews()
         setupConstraints()
+        registerTableViewCells()
         bind()
     }
     
@@ -61,6 +62,10 @@ fileprivate extension DashboardViewController {
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
+    }
+    
+    func registerTableViewCells(){
+        tableView.register(DashboardTableViewCell.self, forCellReuseIdentifier: DashboardTableViewCell.reuseIdentifier)
     }
 }
 

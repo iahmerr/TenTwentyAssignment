@@ -20,6 +20,7 @@ protocol DashboardTableViewCellViewModelType {
     
 }
 
-final class DashboardTableViewCellViewModel {
+final class DashboardTableViewCellViewModel: ReusableTableViewCellViewModelType, DashboardTableViewCellViewModelInput, DashboardTableViewCellViewModelOutput, DashboardTableViewCellViewModelType {
     
+    var reusableIdentifier: String { DashboardTableViewCell.reuseIdentifier }
 }
