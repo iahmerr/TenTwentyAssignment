@@ -68,6 +68,16 @@ fileprivate extension DashboardViewController {
     func registerTableViewCells(){
         tableView.register(DashboardTableViewCell.self, forCellReuseIdentifier: DashboardTableViewCell.reuseIdentifier)
     }
+    
+    func createFooterLoader()-> UIView {
+        let footerSpinner = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 100))
+        let spinner = UIActivityIndicatorView()
+        spinner.center = footerSpinner.center
+        footerSpinner.addSubview(spinner)
+        spinner.startAnimating()
+        
+        return footerSpinner
+    }
 }
 
 fileprivate extension DashboardViewController {
@@ -80,6 +90,7 @@ fileprivate extension DashboardViewController {
             guard let self = self else { return }
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
+                    self.tableView.tableFooterView = nil
                 }
         }).disposed(by: disposeBag)
     }
@@ -101,6 +112,7 @@ extension DashboardViewController: UITableViewDelegate, UITableViewDataSource{
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if self.tableView.scrollPercentage > 0.8 {
             self.viewModel.inputs.bringNewData.onNext(())
+            self.tableView.tableFooterView = createFooterLoader()
         }
     }
 }
