@@ -79,7 +79,7 @@ fileprivate extension DashboardViewController {
             return cell
         })
         
-//        viewModel.outputs.dataSource.bind(to: tableView.rx.items(dataSource: dataSource)).disposed(by: disposeBag)
+        viewModel.outputs.dataSource.bind(to: tableView.rx.items(dataSource: dataSource)).disposed(by: disposeBag)
     }
 }
 

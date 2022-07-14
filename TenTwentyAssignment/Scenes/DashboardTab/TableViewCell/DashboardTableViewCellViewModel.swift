@@ -23,4 +23,8 @@ protocol DashboardTableViewCellViewModelType {
 final class DashboardTableViewCellViewModel: ReusableTableViewCellViewModelType, DashboardTableViewCellViewModelInput, DashboardTableViewCellViewModelOutput, DashboardTableViewCellViewModelType {
     
     var reusableIdentifier: String { DashboardTableViewCell.reuseIdentifier }
+    
+    init(moviesData: MovieList) {
+        
+    }
 }
