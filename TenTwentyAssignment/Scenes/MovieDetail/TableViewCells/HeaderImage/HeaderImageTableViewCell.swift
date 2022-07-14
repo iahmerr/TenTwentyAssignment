@@ -10,7 +10,11 @@ import RxSwift
 
 final class HeaderImageTableViewCell: ReusableTableViewCell {
     
-    let headerImage: UIImageView = UIImageViewFactory.createImageView()
+    private enum Constants {
+        static let imageHeight: CGFloat = 450
+    }
+    
+    let headerImage: UIImageView = UIImageViewFactory.createImageView(mode: .scaleToFill)
     
     private let disposeBag = DisposeBag()
     private var viewModel: HeaderImageTableViewCellViewModel!
@@ -45,7 +49,7 @@ fileprivate extension HeaderImageTableViewCell {
             headerImage.trailingAnchor.constraint(equalTo: trailingAnchor),
             headerImage.topAnchor.constraint(equalTo: topAnchor),
             headerImage.bottomAnchor.constraint(equalTo: bottomAnchor),
-            headerImage.heightAnchor.constraint(equalToConstant: 350)
+            headerImage.heightAnchor.constraint(equalToConstant: Constants.imageHeight)
         ])
     }
     

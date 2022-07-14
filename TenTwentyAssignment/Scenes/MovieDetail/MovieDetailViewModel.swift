@@ -43,7 +43,9 @@ final class MovieDetailViewModel: MovieDetailViewModelInput, MovieDetailViewMode
     
     func createCellViewModels(movieData: MovieList) {
         let imageCellVm = HeaderImageTableViewCellViewModel(image: movieData.posterWithUrl)
+        let overViewCellVM = MovieOverviewTableViewCellViewModel(overview: movieData.overview)
         cellViewModels.append(imageCellVm)
+        cellViewModels.append(overViewCellVM)
         reloadTableViewSubject.onNext(())
     }
     

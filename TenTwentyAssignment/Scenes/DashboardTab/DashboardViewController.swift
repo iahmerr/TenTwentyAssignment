@@ -29,6 +29,7 @@ final class DashboardViewController: UIViewController {
         self.view.backgroundColor = .white
         tableView.delegate = self
         tableView.dataSource = self
+        self.navigationController?.isNavigationBarHidden = true
         
         setupViews()
         setupConstraints()

@@ -20,10 +20,11 @@ final class MovieDetailViewController: UIViewController {
         view.backgroundColor = .white
         tableView.delegate = self
         tableView.dataSource = self
+        self.navigationController?.isNavigationBarHidden = true
         
+        setupTableViewCell()
         setupViews()
         setupConstraints()
-        setupTableViewCell()
         bind()
     }
     
@@ -45,11 +46,17 @@ fileprivate extension MovieDetailViewController {
     }
     
     func setupConstraints(){
-        tableView.pinToSuperView()
+        NSLayoutConstraint.activate([
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            tableView.topAnchor.constraint(equalTo: view.topAnchor, constant: -50)
+        ])
     }
     
     func setupTableViewCell() {
         tableView.register(HeaderImageTableViewCell.self, forCellReuseIdentifier: HeaderImageTableViewCell.reuseIdentifier)
+        tableView.register(MovieOverviewTableViewCell.self, forCellReuseIdentifier: MovieOverviewTableViewCell.reuseIdentifier)
     }
 }
 
