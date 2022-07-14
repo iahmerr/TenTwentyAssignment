@@ -8,7 +8,7 @@
 import UIKit
 import RxSwift
 
-class DashboardTableViewCell: ReusableTableViewCell {
+final class DashboardTableViewCell: ReusableTableViewCell {
     
     private enum Constants {
         static let imageAllSides: CGFloat = 20

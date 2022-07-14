@@ -50,10 +50,10 @@
 		7BD1D40F287F672A00927E40 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D40E287F672A00927E40 /* ApiClient.swift */; };
 		7BD1D411287F674C00927E40 /* UrlRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D410287F674C00927E40 /* UrlRequest.swift */; };
 		7BD1D414287F68FE00927E40 /* MoviesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D413287F68FE00927E40 /* MoviesResponse.swift */; };
-		7BD1D427287F731700927E40 /* RxDataSources in Frameworks */ = {isa = PBXBuildFile; productRef = 7BD1D426287F731700927E40 /* RxDataSources */; };
 		7BD1D429287F752500927E40 /* DashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D428287F752500927E40 /* DashboardTableViewCell.swift */; };
 		7BD1D42B287F753A00927E40 /* DashboardTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D42A287F753A00927E40 /* DashboardTableViewCellViewModel.swift */; };
 		7BD1D42E2880203400927E40 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 7BD1D42D2880203400927E40 /* SDWebImage */; };
+		7BD1D4302880598300927E40 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D42F2880598300927E40 /* UITableView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +121,7 @@
 		7BD1D413287F68FE00927E40 /* MoviesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesResponse.swift; sourceTree = "<group>"; };
 		7BD1D428287F752500927E40 /* DashboardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTableViewCell.swift; sourceTree = "<group>"; };
 		7BD1D42A287F753A00927E40 /* DashboardTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		7BD1D42F2880598300927E40 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,7 +129,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BD1D427287F731700927E40 /* RxDataSources in Frameworks */,
 				7BD1D40A287ED7B100927E40 /* RxSwift in Frameworks */,
 				7BD1D42E2880203400927E40 /* SDWebImage in Frameworks */,
 				7BD1D408287ED7B100927E40 /* RxCocoa in Frameworks */,
@@ -342,6 +342,7 @@
 				7BD1D3FC287E274000927E40 /* UIImageView+Extension.swift */,
 				7BD1D3FD287E274000927E40 /* UIView+Extension.swift */,
 				7BD1D3FE287E274000927E40 /* UIViewController+Extension.swift */,
+				7BD1D42F2880598300927E40 /* UITableView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -392,7 +393,6 @@
 			packageProductDependencies = (
 				7BD1D407287ED7B100927E40 /* RxCocoa */,
 				7BD1D409287ED7B100927E40 /* RxSwift */,
-				7BD1D426287F731700927E40 /* RxDataSources */,
 				7BD1D42D2880203400927E40 /* SDWebImage */,
 			);
 			productName = TenTwentyAssignment;
@@ -469,7 +469,6 @@
 			mainGroup = 7BD1D36E287DE57500927E40;
 			packageReferences = (
 				7BD1D406287ED7B100927E40 /* XCRemoteSwiftPackageReference "RxSwift" */,
-				7BD1D425287F731700927E40 /* XCRemoteSwiftPackageReference "RxDataSources" */,
 				7BD1D42C2880203400927E40 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = 7BD1D378287DE57500927E40 /* Products */;
@@ -546,6 +545,7 @@
 				7BD1D400287E274000927E40 /* AppError.swift in Sources */,
 				7BD1D37F287DE57500927E40 /* DashboardViewController.swift in Sources */,
 				7BD1D3F3287E26F200927E40 /* UILabelFactory.swift in Sources */,
+				7BD1D4302880598300927E40 /* UITableView+Extension.swift in Sources */,
 				7BD1D3E8287E239C00927E40 /* Theme.swift in Sources */,
 				7BD1D40F287F672A00927E40 /* ApiClient.swift in Sources */,
 				7BD1D37B287DE57500927E40 /* AppDelegate.swift in Sources */,
@@ -893,14 +893,6 @@
 				kind = branch;
 			};
 		};
-		7BD1D425287F731700927E40 /* XCRemoteSwiftPackageReference "RxDataSources" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/RxSwiftCommunity/RxDataSources.git";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
 		7BD1D42C2880203400927E40 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
@@ -921,11 +913,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7BD1D406287ED7B100927E40 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
-		};
-		7BD1D426287F731700927E40 /* RxDataSources */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7BD1D425287F731700927E40 /* XCRemoteSwiftPackageReference "RxDataSources" */;
-			productName = RxDataSources;
 		};
 		7BD1D42D2880203400927E40 /* SDWebImage */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -6,12 +6,13 @@
 //
 
 import Foundation
+import UIKit
 
 struct MoviesResponse: Codable {
-    let dates: Dates
-    let page: Int
-    let results: [MovieList]
-    let totalPages, totalResults: Int
+    let dates: Dates?
+    let page: Int?
+    let results: [MovieList]?
+    let totalPages, totalResults: Int?
 
     enum CodingKeys: String, CodingKey {
         case dates, page, results
@@ -28,17 +29,18 @@ struct Dates: Codable {
 // MARK: - Result
 struct MovieList: Codable {
     let adult: Bool
-    let backdropPath: String
+    let backdropPath: String?
     let genreIDS: [Int]
     let id: Int
     let originalLanguage, originalTitle, overview: String
     let popularity: Double
-    let posterPath, releaseDate, title: String
+    let posterPath: String?
+    let releaseDate, title: String
     let video: Bool
     let voteAverage: Double
     let voteCount: Int
     private let imageBaseURL = URL(string: "https://image.tmdb.org/t/p/w500")!
-
+    
     enum CodingKeys: String, CodingKey {
         case adult
         case backdropPath = "backdrop_path"
@@ -54,11 +56,19 @@ struct MovieList: Codable {
         case voteCount = "vote_count"
     }
     
+    
+    
     var posterWithUrl: ImageWithURL {
-        ("\(imageBaseURL)\(posterPath)", nil)
+        guard let posterPath = posterPath else {
+            return ( nil, UIImage(named: "placeholder_icon"))
+        }
+        return ((imageBaseURL.absoluteString + posterPath),nil)
     }
     
     var backdropWithURL: ImageWithURL {
-        ("\(imageBaseURL)\(backdropPath)", nil)
+        guard let backdropPath = backdropPath else {
+            return ( nil, UIImage(named: "placeholder_icon"))
+        }
+       return ((imageBaseURL.absoluteString + backdropPath),nil)
     }
 }

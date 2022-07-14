@@ -8,9 +8,8 @@
 import UIKit
 import RxSwift
 import RxCocoa
-import RxDataSources
 
-class DashboardViewController: UIViewController {
+final class DashboardViewController: UIViewController {
     
     private enum Constants {
         static let headingLabelLeading: CGFloat = 30
@@ -23,10 +22,12 @@ class DashboardViewController: UIViewController {
     
     private let disposeBag = DisposeBag()
     private let viewModel: DashboardViewModelType
-    private var dataSource: RxTableViewSectionedReloadDataSource<SectionModel<Int, ReusableTableViewCellViewModelType>>!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
+        tableView.delegate = self
+        tableView.dataSource = self
         
         setupViews()
         setupConstraints()
@@ -72,14 +73,35 @@ fileprivate extension DashboardViewController {
 fileprivate extension DashboardViewController {
     
     func bind(){
+        viewModel
+            .outputs
+            .reloadTableView
+            .subscribe(onNext: { [weak self] _ in
+            guard let self = self else { return }
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+        }).disposed(by: disposeBag)
+    }
+}
+
+extension DashboardViewController: UITableViewDelegate, UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.outputs.numberOfCells(for: section)
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        dataSource = RxTableViewSectionedReloadDataSource(configureCell: { (_, tableView, _, viewModel) in
-            let cell = tableView.dequeueReusableCell(withIdentifier: viewModel.reusableIdentifier) as! ReusableTableViewCell
-            cell.configure(with: viewModel)
-            return cell
-        })
+        let cell = tableView.dequeueReusableCell(withIdentifier: DashboardTableViewCell.reuseIdentifier, for: indexPath) as! DashboardTableViewCell
+        cell.configure(with: viewModel.outputs.getCellViewModel(for: indexPath.row))
         
-        viewModel.outputs.dataSource.bind(to: tableView.rx.items(dataSource: dataSource)).disposed(by: disposeBag)
+        return cell
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if self.tableView.scrollPercentage > 0.8 {
+            self.viewModel.inputs.bringNewData.onNext(())
+        }
     }
 }
 
