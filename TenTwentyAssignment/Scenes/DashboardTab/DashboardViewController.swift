@@ -19,7 +19,7 @@ class DashboardViewController: UIViewController {
     }
 
     private let headingLabel: UILabel = UILabelFactory.createUILabel(with: .black, textStyle: .regular, fontWeight: .medium, alignment: .left, text: "Watch")
-    private let tableView = UITableViewFactory.createUITableView()
+    private lazy var tableView: UITableView = UITableViewFactory.createUITableView(seperatorStyle: .none)
     
     private let disposeBag = DisposeBag()
     private let viewModel: DashboardViewModelType

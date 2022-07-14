@@ -53,6 +53,7 @@
 		7BD1D427287F731700927E40 /* RxDataSources in Frameworks */ = {isa = PBXBuildFile; productRef = 7BD1D426287F731700927E40 /* RxDataSources */; };
 		7BD1D429287F752500927E40 /* DashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D428287F752500927E40 /* DashboardTableViewCell.swift */; };
 		7BD1D42B287F753A00927E40 /* DashboardTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D42A287F753A00927E40 /* DashboardTableViewCellViewModel.swift */; };
+		7BD1D42E2880203400927E40 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 7BD1D42D2880203400927E40 /* SDWebImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +130,7 @@
 			files = (
 				7BD1D427287F731700927E40 /* RxDataSources in Frameworks */,
 				7BD1D40A287ED7B100927E40 /* RxSwift in Frameworks */,
+				7BD1D42E2880203400927E40 /* SDWebImage in Frameworks */,
 				7BD1D408287ED7B100927E40 /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -391,6 +393,7 @@
 				7BD1D407287ED7B100927E40 /* RxCocoa */,
 				7BD1D409287ED7B100927E40 /* RxSwift */,
 				7BD1D426287F731700927E40 /* RxDataSources */,
+				7BD1D42D2880203400927E40 /* SDWebImage */,
 			);
 			productName = TenTwentyAssignment;
 			productReference = 7BD1D377287DE57500927E40 /* TenTwentyAssignment.app */;
@@ -467,6 +470,7 @@
 			packageReferences = (
 				7BD1D406287ED7B100927E40 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				7BD1D425287F731700927E40 /* XCRemoteSwiftPackageReference "RxDataSources" */,
+				7BD1D42C2880203400927E40 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = 7BD1D378287DE57500927E40 /* Products */;
 			projectDirPath = "";
@@ -897,6 +901,14 @@
 				kind = branch;
 			};
 		};
+		7BD1D42C2880203400927E40 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -914,6 +926,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7BD1D425287F731700927E40 /* XCRemoteSwiftPackageReference "RxDataSources" */;
 			productName = RxDataSources;
+		};
+		7BD1D42D2880203400927E40 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7BD1D42C2880203400927E40 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

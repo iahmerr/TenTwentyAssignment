@@ -37,6 +37,7 @@ struct MovieList: Codable {
     let video: Bool
     let voteAverage: Double
     let voteCount: Int
+    private let imageBaseURL = URL(string: "https://image.tmdb.org/t/p/w500")!
 
     enum CodingKeys: String, CodingKey {
         case adult
@@ -51,5 +52,13 @@ struct MovieList: Codable {
         case title, video
         case voteAverage = "vote_average"
         case voteCount = "vote_count"
+    }
+    
+    var posterWithUrl: ImageWithURL {
+        ("\(imageBaseURL)\(posterPath)", nil)
+    }
+    
+    var backdropWithURL: ImageWithURL {
+        ("\(imageBaseURL)\(backdropPath)", nil)
     }
 }

@@ -35,14 +35,14 @@ public extension UIFont {
     
     static func appFont(forTextStyle style: AppTextStyle, theme: AppFontTheme = AppTheme.shared.fontTheme, weight: AppFontName = .regular) -> UIFont {
         switch style {
-        case .title1:   return .appFont(ofSize: 28.0, theme: theme)
-        case .title2:   return .appFont(ofSize: 24.0, theme: theme)
-        case .title3:   return .appFont(ofSize: 21.0, theme: theme)
-        case .large:    return .appFont(ofSize: 18.0, theme: theme)
-        case .regular:  return .appFont(ofSize: 16.0, theme: theme)
-        case .small:    return .appFont(ofSize: 14.0, theme: theme)
-        case .micro:    return .appFont(ofSize: 12.0, theme: theme)
-        case .nano:     return .appFont(ofSize: 10.0, theme: theme)
+        case .title1:   return .appFont(ofSize: 28.0, weigth: weight ,theme: theme)
+        case .title2:   return .appFont(ofSize: 24.0, weigth: weight ,theme: theme)
+        case .title3:   return .appFont(ofSize: 21.0, weigth: weight ,theme: theme)
+        case .large:    return .appFont(ofSize: 18.0, weigth: weight ,theme: theme)
+        case .regular:  return .appFont(ofSize: 16.0, weigth: weight ,theme: theme)
+        case .small:    return .appFont(ofSize: 14.0, weigth: weight ,theme: theme)
+        case .micro:    return .appFont(ofSize: 12.0, weigth: weight ,theme: theme)
+        case .nano:     return .appFont(ofSize: 10.0, weigth: weight ,theme: theme)
         }
     }
     
