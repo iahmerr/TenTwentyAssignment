@@ -17,6 +17,7 @@ final class MovieDetailViewController: UIViewController {
         static let buttonHeight: CGFloat = 30
         static let buttonWidthAspectRatio: CGFloat = 1
         static let tableViewEdgeInset: UIEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 40, right: 0)
+        static let backIconPointSize: CGFloat = 36
     }
 
     private lazy var tableView: UITableView = UITableViewFactory.createUITableView(seperatorStyle: .none)
@@ -42,7 +43,7 @@ final class MovieDetailViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        let largeConfig = UIImage.SymbolConfiguration(pointSize: 36, weight: .bold, scale: .large)
+        let largeConfig = UIImage.SymbolConfiguration(pointSize: Constants.backIconPointSize, weight: .bold, scale: .large)
         let largeBoldIcon = UIImage(systemName: "arrow.left.circle.fill", withConfiguration: largeConfig)?.withTintColor(.white, renderingMode: .alwaysOriginal)
         backButton.setImage(largeBoldIcon, for: .normal)
     }

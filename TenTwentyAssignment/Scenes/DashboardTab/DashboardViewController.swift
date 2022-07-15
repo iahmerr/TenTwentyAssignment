@@ -14,10 +14,13 @@ final class DashboardViewController: UIViewController {
     private enum Constants {
         static let headingLabelLeading: CGFloat = 30
         static let headingLabelTop: CGFloat = 30
-        static let headingLabelHeight: CGFloat = 80
+        static let headingLabelHeight: CGFloat = 30
+        static let searchIconTrailing: CGFloat = -30
+        static let searchButtonHeight: CGFloat = 30
     }
 
     private let headingLabel: UILabel = UILabelFactory.createUILabel(with: .black, textStyle: .regular, fontWeight: .medium, alignment: .left, text: "Watch")
+    private let searchButton: UIButton = UIButtonFactory.createButton()
     private lazy var tableView: UITableView = UITableViewFactory.createUITableView(seperatorStyle: .none)
     
     private let disposeBag = DisposeBag()
@@ -51,15 +54,23 @@ final class DashboardViewController: UIViewController {
 fileprivate extension DashboardViewController {
     
     func setupViews() {
-        [headingLabel, tableView].forEach(view.addSubview)
+        [headingLabel, tableView, searchButton].forEach(view.addSubview)
         tableView.backgroundColor = .appBackgroundColor
+        
+        let searchIcon = UIImage(systemName: "magnifyingglass")?.withRenderingMode(.alwaysOriginal).withTintColor(.black)
+        searchButton.setImage(searchIcon, for: .normal)
+        
     }
     
     func setupConstraints(){
         NSLayoutConstraint.activate([
             headingLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: Constants.headingLabelLeading),
-            headingLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: Constants.headingLabelTop),
+            headingLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             headingLabel.heightAnchor.constraint(equalToConstant: Constants.headingLabelHeight),
+            searchButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant:  Constants.searchIconTrailing),
+            searchButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            searchButton.heightAnchor.constraint(equalToConstant: Constants.searchButtonHeight),
+            searchButton.widthAnchor.constraint(equalTo: searchButton.heightAnchor),
             
             tableView.topAnchor.constraint(equalTo: headingLabel.bottomAnchor),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),

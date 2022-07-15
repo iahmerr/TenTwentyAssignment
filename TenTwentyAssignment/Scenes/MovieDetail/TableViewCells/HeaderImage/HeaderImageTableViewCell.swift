@@ -17,6 +17,8 @@ final class HeaderImageTableViewCell: ReusableTableViewCell {
         static let stackBottom: CGFloat = -30
         static let stackItemsHeight: CGFloat = 45
         static let stackButtonsCornerRadius: CGFloat = 10
+        static let buttonsFontSize: CGFloat = 16
+        static let trailerButtonBorderWidth: CGFloat = 1
     }
     
     lazy var headerImage: UIImageView = UIImageViewFactory.createImageView(mode: .scaleToFill)
@@ -49,14 +51,14 @@ final class HeaderImageTableViewCell: ReusableTableViewCell {
 fileprivate extension HeaderImageTableViewCell {
 
     func setupViews() {
-        trailerButton.titleLabel?.font = UIFont.appFont(ofSize: 16, weigth: .bold, theme: .main)
-        buyTicketButton.titleLabel?.font = UIFont.appFont(ofSize: 16, weigth: .bold, theme: .main)
+        trailerButton.titleLabel?.font = UIFont.appFont(ofSize: Constants.buttonsFontSize, weigth: .bold, theme: .main)
+        buyTicketButton.titleLabel?.font = UIFont.appFont(ofSize: Constants.buttonsFontSize, weigth: .bold, theme: .main)
         buyTicketButton.layer.cornerRadius = Constants.stackButtonsCornerRadius
         trailerButton.layer.cornerRadius = Constants.stackButtonsCornerRadius
         buyTicketButton.backgroundColor = UIColor.appColor(ofType: .skyBlueColor)
         trailerButton.layer.borderColor = UIColor.appColor(ofType: .skyBlueColor).cgColor
         trailerButton.addImage(image: UIImage(systemName: "play.fill")!)
-        trailerButton.layer.borderWidth = 1
+        trailerButton.layer.borderWidth = Constants.trailerButtonBorderWidth
         [headerImage, stack].forEach(addSubview)
         DispatchQueue.main.async {
             self.headerImage.addGradient()
