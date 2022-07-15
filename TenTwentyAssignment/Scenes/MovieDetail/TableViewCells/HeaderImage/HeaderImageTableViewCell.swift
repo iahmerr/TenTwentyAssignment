@@ -35,6 +35,11 @@ final class HeaderImageTableViewCell: ReusableTableViewCell {
         setupConstraints()
         bind()
     }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        headerImage.addGradient()
+    }
 }
 
 fileprivate extension HeaderImageTableViewCell {
