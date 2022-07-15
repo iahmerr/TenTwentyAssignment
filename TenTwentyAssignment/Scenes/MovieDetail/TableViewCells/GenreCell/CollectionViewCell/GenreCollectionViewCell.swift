@@ -10,10 +10,10 @@ import UIKit
 final class GenreCollectionViewCell: ReusableCollectionViewCell {
     
     private enum Constants {
-        static let genreLabelAllSides: CGFloat = 10
+        static let genreLabelAllSides: CGFloat = 5
     }
     
-    private lazy var genreLabel: UILabel = UILabelFactory.createUILabel(with: .white, textStyle: .small, fontWeight: .light, alignment: .center, numberOfLines: 0, text: "Comedy")
+    private lazy var genreLabel: UILabel = UILabelFactory.createUILabel(with: .white, textStyle: .small, fontWeight: .medium, alignment: .center, numberOfLines: 0, text: "Comedy")
     
     private var viewModel: GenreCollectionViewCellViewModelType!
     override init(frame: CGRect) {
@@ -34,8 +34,8 @@ final class GenreCollectionViewCell: ReusableCollectionViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        
-        genreLabel.backgroundColor = .getRandomColor
+        backgroundColor = .white
+        genreLabel.layer.masksToBounds = true
         genreLabel.layer.cornerRadius = genreLabel.frame.height/2
     }
     
@@ -45,14 +45,15 @@ fileprivate extension GenreCollectionViewCell {
     
     func setupViews() {
         [genreLabel].forEach(addSubview)
+        genreLabel.backgroundColor = .getRandomColor
     }
     
     func setupConstraints() {
-        genreLabel
-            .pin(to: contentView,
-                 padding: (Constants.genreLabelAllSides,
-                           Constants.genreLabelAllSides,
-                           Constants.genreLabelAllSides,
-                           Constants.genreLabelAllSides))
+        NSLayoutConstraint.activate([
+            genreLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Constants.genreLabelAllSides),
+            genreLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: Constants.genreLabelAllSides),
+            genreLabel.topAnchor.constraint(equalTo: topAnchor, constant: Constants.genreLabelAllSides),
+            genreLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: Constants.genreLabelAllSides)
+        ])
     }
 }

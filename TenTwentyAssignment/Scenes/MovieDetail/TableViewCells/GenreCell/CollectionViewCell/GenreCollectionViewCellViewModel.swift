@@ -17,10 +17,18 @@ protocol GenreCollectionViewCellViewModelOutput {
 }
 
 protocol GenreCollectionViewCellViewModelType {
-    
+    var inputs: GenreCollectionViewCellViewModelInput { get }
+    var outputs: GenreCollectionViewCellViewModelOutput { get }
 }
 
-class GenreCollectionViewCellViewModel{
+class GenreCollectionViewCellViewModel: GenreCollectionViewCellViewModelInput, GenreCollectionViewCellViewModelOutput,
+                                        GenreCollectionViewCellViewModelType, ReusableCollectionViewCellViewModelType{
     
-    init() { }
+    var inputs: GenreCollectionViewCellViewModelInput { self }
+    var outputs: GenreCollectionViewCellViewModelOutput { self }
+    
+    var reusableIdentifier: String { GenreCollectionViewCell.reuseIdentifier }
+    
+    init() {
+    }
 }
