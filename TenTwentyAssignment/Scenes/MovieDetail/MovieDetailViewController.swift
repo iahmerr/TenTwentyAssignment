@@ -16,6 +16,7 @@ final class MovieDetailViewController: UIViewController {
         static let buttonLeading: CGFloat = 30
         static let buttonHeight: CGFloat = 30
         static let buttonWidthAspectRatio: CGFloat = 1
+        static let tableViewEdgeInset: UIEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 40, right: 0)
     }
 
     private lazy var tableView: UITableView = UITableViewFactory.createUITableView(seperatorStyle: .none)
@@ -29,6 +30,7 @@ final class MovieDetailViewController: UIViewController {
         view.backgroundColor = .white
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.contentInset = Constants.tableViewEdgeInset
         self.navigationController?.isNavigationBarHidden = true
         
         setupTableViewCell()

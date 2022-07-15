@@ -43,7 +43,7 @@ final class MovieDetailViewModel: MovieDetailViewModelInput, MovieDetailViewMode
     }
     
     func createCellViewModels(movieData: MovieList) {
-        let imageCellVm = HeaderImageTableViewCellViewModel(image: movieData.posterWithUrl)
+        let imageCellVm = HeaderImageTableViewCellViewModel(image: movieData.posterWithUrl, releaseDate: movieData.releaseDate)
         let genreCellVM = MovieGenreTableViewCellViewModel()
         let overViewCellVM = MovieOverviewTableViewCellViewModel(overview: movieData.overview)
         cellViewModels.append(imageCellVm)

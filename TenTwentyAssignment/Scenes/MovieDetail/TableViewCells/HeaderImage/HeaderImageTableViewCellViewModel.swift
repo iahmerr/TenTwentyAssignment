@@ -14,6 +14,7 @@ protocol HeaderImageTableViewCellViewModelInput {
 
 protocol HeaderImageTableViewCellViewModelOutput {
     var image: Observable<ImageWithURL> { get }
+    var releaseDate: Observable<String> { get }
 }
 
 protocol HeaderImageTableViewCellViewModelType {
@@ -30,12 +31,15 @@ final class HeaderImageTableViewCellViewModel: HeaderImageTableViewCellViewModel
     
     //MARK: outputs
     var image: Observable<ImageWithURL> { imageSubject }
+    var releaseDate: Observable<String>{ releaseDateSubject }
     
     //MARK: Subjects
     private let imageSubject = BehaviorSubject<ImageWithURL>(value: (nil, nil))
+    private let releaseDateSubject = BehaviorSubject<String>(value: "")
     
-    init(image: ImageWithURL) {
+    init(image: ImageWithURL, releaseDate: String) {
         imageSubject.onNext(image)
+        releaseDateSubject.onNext("In theaters \(releaseDate)")
     }
     
 }

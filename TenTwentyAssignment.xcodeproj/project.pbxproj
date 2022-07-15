@@ -68,6 +68,7 @@
 		7BD1D4512881571600927E40 /* ReuseableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D4502881571600927E40 /* ReuseableCollectionViewCell.swift */; };
 		7BD1D45328815B1000927E40 /* GenreCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D45228815B1000927E40 /* GenreCollectionViewCellViewModel.swift */; };
 		7BD1D4552881C0F800927E40 /* UICollectionViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D4542881C0F800927E40 /* UICollectionViewFactory.swift */; };
+		7BD1D4582881D40000927E40 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D4572881D40000927E40 /* UIButton+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -150,6 +151,7 @@
 		7BD1D4502881571600927E40 /* ReuseableCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseableCollectionViewCell.swift; sourceTree = "<group>"; };
 		7BD1D45228815B1000927E40 /* GenreCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
 		7BD1D4542881C0F800927E40 /* UICollectionViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewFactory.swift; sourceTree = "<group>"; };
+		7BD1D4572881D40000927E40 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -375,6 +377,7 @@
 				7BD1D3FE287E274000927E40 /* UIViewController+Extension.swift */,
 				7BD1D42F2880598300927E40 /* UITableView+Extension.swift */,
 				7BD1D4502881571600927E40 /* ReuseableCollectionViewCell.swift */,
+				7BD1D4572881D40000927E40 /* UIButton+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -648,6 +651,7 @@
 				7BD1D3B1287E15A200927E40 /* TabBarModuleBuilder.swift in Sources */,
 				7BD1D4382880C8DF00927E40 /* MovieDetailViewModel.swift in Sources */,
 				7BD1D429287F752500927E40 /* DashboardTableViewCell.swift in Sources */,
+				7BD1D4582881D40000927E40 /* UIButton+Extension.swift in Sources */,
 				7BD1D411287F674C00927E40 /* UrlRequest.swift in Sources */,
 				7BD1D3B5287E1DB500927E40 /* DashboardModuleBuilder.swift in Sources */,
 				7BD1D3F7287E26F200927E40 /* UIImageViewFactory.swift in Sources */,
