@@ -16,7 +16,7 @@ final class DashboardRouter: DashboardRouting {
     
     func navigateToDetails(data: MovieList, navigationController: UINavigationController) {
         let viewModel = MovieDetailViewModel(movieData: data)
-        let viewController = MovieDetailViewController(viewModel: viewModel)
+        let viewController = MovieDetailViewController(viewModel: viewModel, router: MovieDetailRouter())
         navigationController.pushViewController(viewController, animated: true)
     }
 }

@@ -10,11 +10,20 @@ import RxSwift
 
 final class MovieDetailViewController: UIViewController {
 
+    private enum Constants {
+        static let tableViewTop: CGFloat = -50
+        static let buttonTop: CGFloat = 50
+        static let buttonLeading: CGFloat = 30
+        static let buttonHeight: CGFloat = 30
+        static let buttonWidthAspectRatio: CGFloat = 1
+    }
 
     private lazy var tableView: UITableView = UITableViewFactory.createUITableView(seperatorStyle: .none)
+    private lazy var backButton: UIButton = UIButtonFactory.createButton()
     
     private let disposeBag = DisposeBag()
     private let viewModel: MovieDetailViewModelType
+    private let router: MovieDetailRouting
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -28,8 +37,17 @@ final class MovieDetailViewController: UIViewController {
         bind()
     }
     
-    init(viewModel: MovieDetailViewModelType) {
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        let largeConfig = UIImage.SymbolConfiguration(pointSize: 36, weight: .bold, scale: .large)
+        let largeBoldIcon = UIImage(systemName: "arrow.left.circle.fill", withConfiguration: largeConfig)?.withTintColor(.white, renderingMode: .alwaysOriginal)
+        backButton.setImage(largeBoldIcon, for: .normal)
+    }
+    
+    init(viewModel: MovieDetailViewModelType, router: MovieDetailRouting) {
         self.viewModel = viewModel
+        self.router = router
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -42,20 +60,27 @@ final class MovieDetailViewController: UIViewController {
 fileprivate extension MovieDetailViewController {
     
     func setupViews(){
-        [tableView].forEach(view.addSubview)
+        [tableView, backButton].forEach(view.addSubview)
     }
     
     func setupConstraints(){
         NSLayoutConstraint.activate([
+            
+            backButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: Constants.buttonLeading),
+            backButton.topAnchor.constraint(equalTo: view.topAnchor, constant: Constants.buttonTop),
+            backButton.heightAnchor.constraint(equalToConstant: Constants.buttonHeight),
+            backButton.widthAnchor.constraint(equalTo: backButton.heightAnchor),
+            
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            tableView.topAnchor.constraint(equalTo: view.topAnchor, constant: -50)
+            tableView.topAnchor.constraint(equalTo: view.topAnchor, constant: Constants.tableViewTop)
         ])
     }
     
     func setupTableViewCell() {
         tableView.register(HeaderImageTableViewCell.self, forCellReuseIdentifier: HeaderImageTableViewCell.reuseIdentifier)
+        tableView.register(MovieGenreTableViewCell.self, forCellReuseIdentifier: MovieGenreTableViewCell.reuseIdentifier)
         tableView.register(MovieOverviewTableViewCell.self, forCellReuseIdentifier: MovieOverviewTableViewCell.reuseIdentifier)
     }
 }
@@ -69,6 +94,16 @@ fileprivate extension MovieDetailViewController {
                 self.tableView.reloadData()
             }
         }).disposed(by: disposeBag)
+        
+        backButton
+            .rx
+            .tap
+            .subscribe(onNext: {[weak self] _ in
+            guard let self = self else { return }
+            self.router.pop(nav: self.navigationController!)
+        }).disposed(by: disposeBag)
+        
+        
     }
 }
 

@@ -35,7 +35,8 @@ final class MovieDetailViewModel: MovieDetailViewModelInput, MovieDetailViewMode
     private let reloadTableViewSubject = PublishSubject<Void>()
     
     //MARK: variables
-    var cellViewModels: [ReusableTableViewCellViewModelType] = []
+    private var cellViewModels: [ReusableTableViewCellViewModelType] = []
+    private let disposeBag = DisposeBag()
     
     init(movieData: MovieList) {
         createCellViewModels(movieData: movieData)
@@ -43,8 +44,10 @@ final class MovieDetailViewModel: MovieDetailViewModelInput, MovieDetailViewMode
     
     func createCellViewModels(movieData: MovieList) {
         let imageCellVm = HeaderImageTableViewCellViewModel(image: movieData.posterWithUrl)
+        let genreCellVM = MovieGenreTableViewCellViewModel()
         let overViewCellVM = MovieOverviewTableViewCellViewModel(overview: movieData.overview)
         cellViewModels.append(imageCellVm)
+        cellViewModels.append(genreCellVM)
         cellViewModels.append(overViewCellVM)
         reloadTableViewSubject.onNext(())
     }
