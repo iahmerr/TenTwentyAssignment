@@ -7,7 +7,6 @@
 
 import Foundation
 import RxSwift
-import RxDataSources
 
 protocol DashboardViewModelInput {
     var bringNewData: AnyObserver<Void> { get }
@@ -83,7 +82,6 @@ fileprivate extension DashboardViewModel {
     func createCellViewModels(result: MoviesResponse) {
         guard let finalResult = result.results else { return }
         self.moviesResponse.append(contentsOf: finalResult)
-        print(moviesResponse.count)
         self.cellViewModels.append(contentsOf:  finalResult.map { DashboardTableViewCellViewModel(moviesData: $0) })
         isFetchingData = false
         reloadTableViewSubject.onNext(())
