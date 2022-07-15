@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B8710792881E92A00BA55BC /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 7B8710782881E92A00BA55BC /* RxCocoa */; };
+		7B87107B2881E92A00BA55BC /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7B87107A2881E92A00BA55BC /* RxSwift */; };
 		7BD1D37B287DE57500927E40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D37A287DE57500927E40 /* AppDelegate.swift */; };
 		7BD1D37D287DE57500927E40 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D37C287DE57500927E40 /* SceneDelegate.swift */; };
 		7BD1D37F287DE57500927E40 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D37E287DE57500927E40 /* DashboardViewController.swift */; };
@@ -44,15 +46,12 @@
 		7BD1D402287E274000927E40 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D3FD287E274000927E40 /* UIView+Extension.swift */; };
 		7BD1D403287E274000927E40 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D3FE287E274000927E40 /* UIViewController+Extension.swift */; };
 		7BD1D405287EC06800927E40 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D404287EC06800927E40 /* DashboardViewModel.swift */; };
-		7BD1D408287ED7B100927E40 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 7BD1D407287ED7B100927E40 /* RxCocoa */; };
-		7BD1D40A287ED7B100927E40 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7BD1D409287ED7B100927E40 /* RxSwift */; };
 		7BD1D40D287F670400927E40 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D40C287F670400927E40 /* ApiService.swift */; };
 		7BD1D40F287F672A00927E40 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D40E287F672A00927E40 /* ApiClient.swift */; };
 		7BD1D411287F674C00927E40 /* UrlRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D410287F674C00927E40 /* UrlRequest.swift */; };
 		7BD1D414287F68FE00927E40 /* MoviesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D413287F68FE00927E40 /* MoviesResponse.swift */; };
 		7BD1D429287F752500927E40 /* DashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D428287F752500927E40 /* DashboardTableViewCell.swift */; };
 		7BD1D42B287F753A00927E40 /* DashboardTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D42A287F753A00927E40 /* DashboardTableViewCellViewModel.swift */; };
-		7BD1D42E2880203400927E40 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 7BD1D42D2880203400927E40 /* SDWebImage */; };
 		7BD1D4302880598300927E40 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D42F2880598300927E40 /* UITableView+Extension.swift */; };
 		7BD1D4332880C72200927E40 /* DashboardSceneRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D4322880C72200927E40 /* DashboardSceneRouter.swift */; };
 		7BD1D4362880C7D200927E40 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D4352880C7D200927E40 /* MovieDetailViewController.swift */; };
@@ -159,9 +158,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BD1D40A287ED7B100927E40 /* RxSwift in Frameworks */,
-				7BD1D42E2880203400927E40 /* SDWebImage in Frameworks */,
-				7BD1D408287ED7B100927E40 /* RxCocoa in Frameworks */,
+				7B87107B2881E92A00BA55BC /* RxSwift in Frameworks */,
+				7B8710792881E92A00BA55BC /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,9 +498,8 @@
 			);
 			name = TenTwentyAssignment;
 			packageProductDependencies = (
-				7BD1D407287ED7B100927E40 /* RxCocoa */,
-				7BD1D409287ED7B100927E40 /* RxSwift */,
-				7BD1D42D2880203400927E40 /* SDWebImage */,
+				7B8710782881E92A00BA55BC /* RxCocoa */,
+				7B87107A2881E92A00BA55BC /* RxSwift */,
 			);
 			productName = TenTwentyAssignment;
 			productReference = 7BD1D377287DE57500927E40 /* TenTwentyAssignment.app */;
@@ -577,8 +574,7 @@
 			);
 			mainGroup = 7BD1D36E287DE57500927E40;
 			packageReferences = (
-				7BD1D406287ED7B100927E40 /* XCRemoteSwiftPackageReference "RxSwift" */,
-				7BD1D42C2880203400927E40 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				7B8710772881E92A00BA55BC /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 7BD1D378287DE57500927E40 /* Products */;
 			projectDirPath = "";
@@ -1009,7 +1005,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		7BD1D406287ED7B100927E40 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+		7B8710772881E92A00BA55BC /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
 			requirement = {
@@ -1017,31 +1013,18 @@
 				kind = branch;
 			};
 		};
-		7BD1D42C2880203400927E40 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		7BD1D407287ED7B100927E40 /* RxCocoa */ = {
+		7B8710782881E92A00BA55BC /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 7BD1D406287ED7B100927E40 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			package = 7B8710772881E92A00BA55BC /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxCocoa;
 		};
-		7BD1D409287ED7B100927E40 /* RxSwift */ = {
+		7B87107A2881E92A00BA55BC /* RxSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 7BD1D406287ED7B100927E40 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			package = 7B8710772881E92A00BA55BC /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
-		};
-		7BD1D42D2880203400927E40 /* SDWebImage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7BD1D42C2880203400927E40 /* XCRemoteSwiftPackageReference "SDWebImage" */;
-			productName = SDWebImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
