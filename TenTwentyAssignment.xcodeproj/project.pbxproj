@@ -68,6 +68,7 @@
 		7BD1D45328815B1000927E40 /* GenreCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D45228815B1000927E40 /* GenreCollectionViewCellViewModel.swift */; };
 		7BD1D4552881C0F800927E40 /* UICollectionViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D4542881C0F800927E40 /* UICollectionViewFactory.swift */; };
 		7BD1D4582881D40000927E40 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1D4572881D40000927E40 /* UIButton+Extension.swift */; };
+		7BF6D43A2881FCDE00BA02A5 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 7BF6D4392881FCDE00BA02A5 /* SDWebImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -158,6 +159,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BF6D43A2881FCDE00BA02A5 /* SDWebImage in Frameworks */,
 				7B87107B2881E92A00BA55BC /* RxSwift in Frameworks */,
 				7B8710792881E92A00BA55BC /* RxCocoa in Frameworks */,
 			);
@@ -500,6 +502,7 @@
 			packageProductDependencies = (
 				7B8710782881E92A00BA55BC /* RxCocoa */,
 				7B87107A2881E92A00BA55BC /* RxSwift */,
+				7BF6D4392881FCDE00BA02A5 /* SDWebImage */,
 			);
 			productName = TenTwentyAssignment;
 			productReference = 7BD1D377287DE57500927E40 /* TenTwentyAssignment.app */;
@@ -575,6 +578,7 @@
 			mainGroup = 7BD1D36E287DE57500927E40;
 			packageReferences = (
 				7B8710772881E92A00BA55BC /* XCRemoteSwiftPackageReference "RxSwift" */,
+				7BF6D4382881FCDE00BA02A5 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = 7BD1D378287DE57500927E40 /* Products */;
 			projectDirPath = "";
@@ -1013,6 +1017,14 @@
 				kind = branch;
 			};
 		};
+		7BF6D4382881FCDE00BA02A5 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1025,6 +1037,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7B8710772881E92A00BA55BC /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
+		};
+		7BF6D4392881FCDE00BA02A5 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7BF6D4382881FCDE00BA02A5 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
