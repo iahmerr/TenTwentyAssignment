@@ -11,8 +11,6 @@ class MovieGenreTableViewCell: ReusableTableViewCell {
     
     private enum Constants {
         static let collectionViewContentInset = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 20)
-        static let headerLabelTopAnchor: CGFloat = 20
-        static let headerLabelLeadingAnchor: CGFloat = 30
         static let collectionViewTopAnchor: CGFloat = 5
         static let collectionViewBottomAnchor: CGFloat = -10
         static let collectionViewLeadingAnchor: CGFloat = 10
